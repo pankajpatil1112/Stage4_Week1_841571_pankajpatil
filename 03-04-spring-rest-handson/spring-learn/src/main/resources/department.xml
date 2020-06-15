@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+  
+   <bean id = "department1" class = "com.cognizant.springlearn.model.Department" scope="prototype">
+    <property name="id" value="1"/>
+     <property name="name" value="mechanical"/>
+   </bean>
+    <bean id = "department2" class = "com.cognizant.springlearn.model.Department" scope="prototype">
+    <property name="id" value="2"/>
+     <property name="name" value="computer"/>
+   </bean>
+    <bean id = "department3" class = "com.cognizant.springlearn.model.Department" scope="prototype">
+    <property name="id" value="3"/>
+     <property name="name" value="Electrcal"/>
+   </bean>
+    <bean id = "department4" class = "com.cognizant.springlearn.model.Department" scope="prototype">
+    <property name="id" value="4"/>
+     <property name="name" value="Entc"/>
+   </bean>
+  
+    <bean id="departmentList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="department1"></ref>
+                <ref bean="department2"></ref>
+                <ref bean="department3"></ref>
+                <ref bean="department4"></ref>
+            </list>
+        </constructor-arg>
+    </bean>
+  
+   
+   
+</beans>
